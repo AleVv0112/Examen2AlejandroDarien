@@ -17,3 +17,11 @@ def test_DivisibleTempo_numero_primo():
 def test_DivisibleTempo_numero_no_primo():
     obj = MiClase(None, None, None, None, None)
     assert obj.DivisibleTempo(10) == [1, 2, 5, 10]
+    
+def test_Encuentra_elemento_presente():
+    obj = MiClase(None, None, None, None, None)
+    assert obj.Encuentra([1, 2, 3, 4, 5], 3) == True 
+
+def test_Encuentra_elemento_ausente():
+    obj = MiClase(None, None, None, None, None)
+    assert obj.Encuentra([1, 2, 3, 4, 5], 6) == False

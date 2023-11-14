@@ -25,3 +25,21 @@ def test_Encuentra_elemento_presente():
 def test_Encuentra_elemento_ausente():
     obj = MiClase(None, None, None, None, None)
     assert obj.Encuentra([1, 2, 3, 4, 5], 6) == False
+
+
+
+def test_ObtieneMasBailable_lista_vacia():
+    obj = MiClase(None, None, None, None, None)
+    assert obj.ObtieneMasBailable([]) is None  
+
+def test_ObtieneMasBailable_lista_no_vacia():
+    obj = MiClase(None, None, None, None, None)
+    assert obj.ObtieneMasBailable([1, 2, 3, 4, 5]) == 5 
+
+def test_VerificaListaCanciones_con_None():
+    obj = MiClase(None, None, None, None, None)
+    assert obj.VerificaListaCanciones(["Canción 1", None, "Canción 3"]) == False 
+
+def test_VerificaListaCanciones_sin_None():
+    obj = MiClase(None, None, None, None, None)
+    assert obj.VerificaListaCanciones(["Canción 1", "Canción 2", "Canción 3"]) == True

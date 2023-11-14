@@ -1,3 +1,4 @@
+
 class MiClase:
     def __init__(self, Valencia, Tempo, Tonos, listaCanciones, listaBailabilidad):
         self.Valencia = Valencia
@@ -25,3 +26,5 @@ class MiClase:
         if any(song is None for song in lista):
             return False
         return True
+
+
